@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona de Juegos | Memoria Banderas</title>
+<meta name="description" content="Juegos online gratis de memoria de banderas para entrenar tu mente.">
+<meta name="keywords" content="juegos online, juegos gratis, juegos de memoria de banderas">
+<meta name="author" content="SAYUXP">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tusitio.com/">
+<meta property="og:title" content="Zona de Juegos | Memoria Banderas">
+<meta property="og:description" content="Juegos de memoria de banderas gratis para entrenar tu mente">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tuweb.com">
+<meta property="og:image" content="https://tuweb.com/img/juegos.jpg">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="cssgeneral.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XHRGQRXBW8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XHRGQRXBW8');
+</script>
+</head>
+<body>
+<div id="menu-container"></div>
+<main>
+<h1 id="tituloPagina">🧠 Memoria - Banderas</h1>
+<br>
+<div class="anuncio">
+</div>
+<br>
+<section class="juego-memoria">
+<div class="panel-tiempo">
+⏳ Tiempo: <span id="tiempo">00:00</span>
+</div>
+<br>
+<div class="tablero-memoria"></div>
+</section>
+<br>
+<section class="ranking-card">
+<h2>🏆 Top Memoria</h2>
+<div class="tabla-scroll">
+<table class="tabla-ranking">
+<thead>
+<tr>
+<th>Pos</th>
+<th>Nombre</th>
+<th>Tiempo</th>
+</tr>
+</thead>
+<tbody id="rankingBody">
+<tr><td>1</td><td>-</td><td>-</td></tr>
+<tr><td>2</td><td>-</td><td>-</td></tr>
+<tr><td>3</td><td>-</td><td>-</td></tr>
+<tr><td>4</td><td>-</td><td>-</td></tr>
+<tr><td>5</td><td>-</td><td>-</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<div id="modalNombre" class="modal" style="display:none;">
+<div class="modalContenido">
+<h3>🏆 Nuevo récord</h3>
+<input id="inputNombre" placeholder="Tu nombre">
+<br><br>
+<button id="aceptarNombre">Guardar</button>
+<button id="cancelarNombre">Cancelar</button>
+</div>
+</div>
+<script>
+var categoriaJuego = "memoria_banderas";
+</script>
+<script type="module" src="motormemoria.js"></script>
+<script src="jsgeneral.js"></script>
+</body>
+</html>

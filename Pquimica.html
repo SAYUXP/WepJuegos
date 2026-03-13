@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Preguntas de Quimica</title>
+
+<meta name="description" content="Juego de preguntas de quimica">
+<meta name="author" content="SAYUXP">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="juego de preguntas matemáticas, desafío quimica online, juegos educativos, aprender quimica, juegos para niños, juego para adultos">
+<link rel="canonical" href="https://tusitio.com/Paginas/Preguntas/Pmatematica.html">
+<meta property="og:title" content="Desafío Quimica - Juego de Preguntas">
+<meta property="og:description" content="Pon a prueba tu conocimiento con este juego de preguntas de quimica y mejora tus conocimientos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tusitio.com/Paginas/Preguntas/Pmatematica.html">
+<meta property="og:image" content="https://tusitio.com/img/matematica.jpg">
+<link rel="icon" href="/img/favicon_io/favicon.ico">
+
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon_io/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/img/favicon_io/android-chrome-512x512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
+<link rel="stylesheet" href="cssgeneral.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XHRGQRXBW8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XHRGQRXBW8');
+</script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script>
+    var categoriaJuego = "quimica";
+</script>
+<script type="module" src="motorpreguntas.js" defer></script>
+</head><body>
+<div id="menu-container"></div>
+<main>
+  <h1 id="tituloPagina">Preguntas de Quimica</h1>
+    <div class="ads"></div>
+    <section class="juego-preguntas">
+        <div class="pregunta" id="pregunta">
+            Cargando pregunta...
+        </div>
+        <div class="temporizador">
+            ⏳ Tiempo: <span id="tiempo">10</span>s
+        </div>
+        <div class="opciones">
+            <button class="opcion" id="op1"></button>
+            <button class="opcion" id="op2"></button>
+            <button class="opcion" id="op3"></button>
+            <button class="opcion" id="op4"></button>
+        </div>
+
+        <div class="puntos">
+            ⭐ Puntos: <span id="puntos">0</span>
+        </div>
+
+        <div class="controles">
+            <button id="pausa">⏸ Pausa</button>
+            <button id="guardar" style="display:none; background:#f1c40f; color:#000;">
+                💾 Registrar Puntaje
+            </button>
+        </div>
+    </section>
+    <section class="ranking-card">
+        <h2 id="tituloRanking">🏆 Top 5</h2>
+        <table class="tabla-ranking">
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Jugador</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+
+            <tbody id="rankingBody">
+                <tr><td>1</td><td>-</td><td>-</td></tr>
+                <tr><td>2</td><td>-</td><td>-</td></tr>
+                <tr><td>3</td><td>-</td><td>-</td></tr>
+                <tr><td>4</td><td>-</td><td>-</td></tr>
+                <tr><td>5</td><td>-</td><td>-</td></tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<div id="modalNombre" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h3>¡Nuevo Récord!</h3>
+        <p>Ingresa tu nombre para el ranking:</p>
+        <input type="text" id="inputNombre" maxlength="15" placeholder="Tu nombre...">
+        <div class="modal-buttons">
+            <button id="cancelarNombre">Cancelar</button>
+            <button id="aceptarNombre">Aceptar</button>
+        </div>
+    </div>
+</div>
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<script src="jsgeneral.js"></script>
+</body></html>
