@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-fetch("/componentes/menu.html")
+fetch("menu.html")
 .then(response => response.text())
 .then(data => {
 
