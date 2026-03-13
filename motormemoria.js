@@ -10,7 +10,7 @@ addDoc,
 doc,
 setDoc,
 onSnapshot
-} from "firebase.js";
+} from "./firebase.js";
 
 
 // ============================
