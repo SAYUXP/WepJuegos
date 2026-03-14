@@ -1,6 +1,3 @@
-/* ------------------- */
-/* RESET */
-/* ------------------- */
 
 *{
 margin:0;
@@ -8,22 +5,12 @@ padding:0;
 box-sizing:border-box;
 }
 
-/* ------------------- */
-/* BODY */
-/* ------------------- */
-
 body{
 font-family:Arial, Helvetica, sans-serif;
 background:#f4f6f8;
 color:#333;
 overflow-x:hidden;
-width: 100%; /* Asegura que el body no se estire más de la cuenta */
 }
-
-/* ------------------- */
-/* HEADER */
-/* ------------------- */
-
 header{
 display:flex;
 align-items:center;
@@ -34,16 +21,11 @@ padding:0 15px;
 position:relative;
 z-index:1100;
 }
-
 header h1{
 flex:1;
 text-align:center;
 font-size:20px;
 }
-
-/* ------------------- */
-/* BOTON MENU */
-/* ------------------- */
 
 .menu-btn{
 font-size:28px;
@@ -52,11 +34,6 @@ border:none;
 color:white;
 cursor:pointer;
 }
-
-/* ------------------- */
-/* SIDEBAR */
-/* ------------------- */
-
 .sidebar{
 position:fixed;
 left:-250px;
@@ -68,25 +45,18 @@ padding-top:70px;
 transition:0.3s;
 z-index:1000;
 }
-
 .sidebar a{
 display:block;
 padding:15px;
 color:white;
 text-decoration:none;
 }
-
 .sidebar a:hover{
 background:#2c3e50;
 }
-
 .sidebar.active{
 left:0;
 }
-
-/* ------------------- */
-/* OVERLAY */
-/* ------------------- */
 
 .overlay{
 display:none;
@@ -102,21 +72,11 @@ z-index:900;
 .overlay.active{
 display:block;
 }
-
-/* ------------------- */
-/* MAIN */
-/* ------------------- */
-
 main{
 padding:20px;
 max-width:900px;
 margin:auto;
 }
-
-/* ------------------- */
-/* ANUNCIOS */
-/* ------------------- */
-
 .anuncio{
 background:#e9ecef;
 border:2px dashed #bbb;
@@ -124,10 +84,6 @@ padding:30px;
 text-align:center;
 margin:20px 0;
 }
-
-/* ------------------- */
-/* MENU JUEGOS */
-/* ------------------- */
 
 .menu-juegos{
 display:grid;
@@ -149,9 +105,6 @@ transition:0.2s;
 .menu-juegos button:hover{
 background:#2980b9;
 }
-
-/* RESPONSIVE MENU JUEGOS */
-
 @media (min-width:600px){
 
 .menu-juegos{
@@ -159,20 +112,14 @@ grid-template-columns:1fr 1fr;
 }
 
 }
-
-/* ------------------- */
-/* RANKING (CORREGIDO) */
-/* ------------------- */
-
 .ranking-card {
   background: white;
-  padding: 15px 10px; /* Reducimos padding lateral para ganar espacio */
+  padding: 15px 10px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 30px;
-  width: 100%; /* Asegura que la tarjeta no se estire */
+  width: 100%;
 }
-
 .ranking-card h2 {
   text-align: center;
   margin-bottom: 15px;
@@ -181,31 +128,30 @@ grid-template-columns:1fr 1fr;
 
 .tabla-scroll {
   width: 100%;
-  overflow-x: hidden; /* Evitamos el scroll lateral si queremos que sea fija */
+  overflow-x: hidden; 
   display: flex;
-  justify-content: center; /* Centra la tabla si es más pequeña */
+  justify-content: center;
 }
 
 .tabla-ranking {
   border-collapse: collapse;
   width: 100%; 
-  table-layout: fixed; /* OBLIGA a las celdas a respetar el ancho del 100% */
+  table-layout: fixed;
   margin: auto;
 }
 
 .tabla-ranking th,
 .tabla-ranking td {
   border: 1px solid #ddd;
-  padding: 8px 2px; /* Reducimos mucho el padding para que quepa en móviles */
+  padding: 8px 2px;
   text-align: center;
-  font-size: 14px; /* Tamaño de letra más adecuado para pantallas pequeñas */
-  word-wrap: break-word; /* Si el nombre es largo, salta de línea en vez de estirar la tabla */
+  font-size: 14px; 
+  word-wrap: break-word;
 }
 
-/* Ajuste de anchos proporcionales */
-.tabla-ranking th:nth-child(1) { width: 20%; } /* Pos (1, 2, 3...) */
-.tabla-ranking th:nth-child(2) { width: 50%; } /* Jugador (Nombre) */
-.tabla-ranking th:nth-child(3) { width: 30%; } /* Puntos (Número) */
+.tabla-ranking th:nth-child(1) { width: 20%; } 
+.tabla-ranking th:nth-child(2) { width: 50%; } 
+.tabla-ranking th:nth-child(3) { width: 30%; } 
 
 .tabla-ranking th {
   background: #3498db;
@@ -215,12 +161,6 @@ grid-template-columns:1fr 1fr;
 .tabla-ranking tr:hover {
   background: #f2f2f2;
 }
-
-
-/* ------------------- */
-/* COLORES RANKING */
-/* ------------------- */
-
 .top1{
 border:3px solid gold;
 background:linear-gradient(white,#fff8dc);
@@ -245,11 +185,6 @@ border:3px solid #4caf50;
 .top5{
 border:3px solid #2196f3;
 }
-
-/* ------------------- */
-/* ANIMACION TOP 1 */
-/* ------------------- */
-
 .top1::before{
 content:"";
 position:absolute;
@@ -277,11 +212,6 @@ left:100%;
 }
 
 }
-
-/* ------------------- */
-/* MENU PREGUNTAS */
-/* ------------------- */
-
 .menu-preguntas{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -316,15 +246,9 @@ cursor:pointer;
 transition:all 0.25s;
 
 }
-
-/* icono grande */
-
 .menu-preguntas button::first-line{
 font-size:30px;
 }
-
-/* animacion */
-
 .menu-preguntas button:hover{
 
 background:#1e8449;
@@ -332,9 +256,6 @@ transform:translateY(-4px);
 box-shadow:0 6px 12px rgba(0,0,0,0.2);
 
 }
-
-/* RESPONSIVE */
-
 @media (min-width:600px){
 
 .menu-preguntas{
@@ -350,9 +271,6 @@ grid-template-columns:1fr 1fr 1fr;
 }
 
 }
-/* ------------------- */
-/* JUEGO PREGUNTAS */
-/* ------------------- */
 
 .juego-preguntas{
 
@@ -363,8 +281,6 @@ box-shadow:0 3px 10px rgba(0,0,0,0.1);
 
 }
 
-/* PREGUNTA */
-
 .pregunta{
 
 font-size:22px;
@@ -372,9 +288,6 @@ text-align:center;
 margin-bottom:20px;
 
 }
-
-/* TEMPORIZADOR */
-
 .temporizador{
 
 text-align:center;
@@ -382,8 +295,6 @@ font-size:20px;
 margin-bottom:20px;
 
 }
-
-/* OPCIONES */
 
 .opciones{
 
@@ -412,8 +323,6 @@ background:#2980b9;
 
 }
 
-/* PUNTOS */
-
 .puntos{
 
 text-align:center;
@@ -421,9 +330,6 @@ font-size:20px;
 margin-top:20px;
 
 }
-
-/* BOTONES */
-
 .controles{
 
 display:flex;
@@ -450,9 +356,6 @@ cursor:pointer;
 background:#1e8449;
 
 }
-
-/* RESPONSIVE OPCIONES */
-
 @media (min-width:600px){
 
 .opciones{
@@ -462,21 +365,18 @@ grid-template-columns:1fr 1fr;
 }
 
 }
-/* ------------------- */
-/* MODAL CORREGIDO */
-/* ------------------- */
 .modal {
   display: none; 
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Asegura el ancho total de la pantalla */
-  height: 100vh; /* Asegura el alto total de la pantalla */
+  width: 100vw; 
+  height: 100vh; 
   background: rgba(0,0,0,0.7);
   z-index: 3000;
   
-  /* Centrado forzado con Flexbox */
-  display: none; /* Se cambiará a flex con JS */
+
+  display: none; 
   justify-content: center;
   align-items: center;
 }
@@ -485,11 +385,11 @@ grid-template-columns:1fr 1fr;
   background: white;
   padding: 25px;
   border-radius: 15px;
-  width: 90%; /* Responsive para móviles */
-  max-width: 320px; /* Tamaño máximo en PC */
+  width: 90%; 
+  max-width: 320px; 
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  margin: auto; /* Refuerzo de centrado */
+  margin: auto; 
 }
 
 .modal-content h3 {
@@ -497,7 +397,7 @@ grid-template-columns:1fr 1fr;
 }
 
 .modal-content input {
-  width: 100%; /* Ajustado al ancho del contenido */
+  width: 100%; 
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 6px;
@@ -526,10 +426,6 @@ grid-template-columns:1fr 1fr;
   background-color: #e74c3c;
   color: white;
 }
-/* ------------------- */
-/* JUEGO MEMORIA */
-/* ------------------- */
-
 .juego-memoria{
 
 background:white;
@@ -540,8 +436,6 @@ margin-bottom:25px;
 
 }
 
-/* PANEL TIEMPO */
-
 .panel-tiempo{
 
 text-align:center;
@@ -549,8 +443,6 @@ font-size:20px;
 margin-bottom:20px;
 
 }
-
-/* TABLERO */
 
 .tablero-memoria{
 
@@ -560,8 +452,6 @@ gap:12px;
 justify-items:center;
 
 }
-
-/* CARTAS */
 
 .carta{
 
@@ -586,16 +476,11 @@ user-select:none;
 transition:transform 0.2s, background 0.2s;
 
 }
-
-/* HOVER */
-
 .carta:hover{
 
 transform:scale(1.05);
 
 }
-
-/* CARTA ENCONTRADA */
 
 .carta.encontrada{
 
@@ -603,8 +488,6 @@ background:#27ae60;
 cursor:default;
 
 }
-
-/* RESPONSIVE */
 
 @media (min-width:600px){
 
@@ -641,19 +524,113 @@ font-size:40px;
 }
 
 }
-/*===≠========================*/
-/*/ H1 EN MENU*/
-/*=============≠==============*/
 #menu-container h1 {
     color: white;
     font-size: 22px;
     margin: 0;
     padding: 10px 20px;
-    display: block; /* aseguramos que se muestre */
+    display: block; 
 }
 
-/* Si el header usa flex, quitar flex:1 al h1 interno para que respete el ancho */
+
 header h1 {
     flex: unset;
     text-align: center;
+}
+.juego-puzzle{
+display:flex;
+justify-content:center;
+}
+
+#tableroPuzzle{
+
+width:90vw;
+height:90vw;
+
+max-width:400px;
+max-height:400px;
+
+display:grid;
+
+border:3px solid #333;
+
+gap:0;
+
+overflow:hidden;
+
+position:relative;
+
+background:#000;
+
+}
+
+#imagenReferencia{
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+z-index:10;
+
+grid-column:1 / -1;
+grid-row:1 / -1;
+
+pointer-events:none;
+}
+
+#imagenReferencia img{
+width:100%;
+height:100%;
+object-fit:fill;
+display:block;
+}
+.pieza{
+
+cursor:pointer;
+
+background-repeat:no-repeat;
+
+width:100%;
+height:100%;
+
+border:none;
+
+}
+.btn-ayuda{
+position:relative;
+padding:10px 20px;
+cursor:pointer;
+overflow:hidden;
+}
+
+.barra-recarga{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:4px;
+background:#ddd;
+}
+
+#progresoAyuda{
+width:0%;
+height:100%;
+background:#4caf50;
+transition:width 1s linear;
+}
+.panel-tiempo{
+display:flex;
+justify-content:center;
+gap:20px;
+font-size:18px;
+flex-wrap:wrap;
+}
+
+.nivel-info{
+font-weight:bold;
 }

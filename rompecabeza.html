@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rompecabezas | Zona de Juegos</title>
+
+<meta name="description" content="Arma el rompecabezas lo más rápido posible y entra en el ranking.">
+<meta name="keywords" content="rompecabezas online, puzzle, juegos de mesa, juegos gratis">
+<meta name="author" content="SAYUXP">
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="cssgeneral.css">
+
+</head>
+
+<body>
+
+<div id="menu-container"></div>
+
+<main>
+
+<h1 id="tituloPagina">🧩 Rompecabezas</h1>
+
+<br>
+
+<div class="panel-tiempo">
+
+<span>⏱ Tiempo: <span id="tiempo">00:00</span></span>
+
+<span class="nivel-info">
+🧩 Nivel: <span id="nivelJuego">1</span>
+</span>
+
+<span class="nivel-info">
+🎯 Dificultad: <span id="dificultadActual">3x3</span>
+</span>
+
+</div>
+
+<br>
+
+<div class="anuncio">
+</div>
+
+<br>
+
+<section class="juego-puzzle">
+
+<div id="tableroPuzzle">
+
+<div id="imagenReferencia">
+<img id="imgReferenciaReal">
+</div>
+
+</div>
+
+</section>
+
+<br>
+
+<section class="controles-puzzle">
+
+<button id="mostrarImagen" class="btn-ayuda">
+
+<span id="textoAyuda">🖼 Mostrar imagen</span>
+
+<div class="barra-recarga">
+<div id="progresoAyuda"></div>
+</div>
+
+</button>
+
+<button id="registrarPuntaje" style="display:none;">
+🏆 Registrar puntaje
+</button>
+
+</section>
+
+<br>
+
+<section class="ranking-card">
+
+<h2>🏆 Top Rompecabezas</h2>
+
+<div class="tabla-scroll">
+
+<table class="tabla-ranking">
+
+<thead>
+<tr>
+<th>Pos</th>
+<th>Nombre</th>
+<th>Nivel</th>
+<th>Tiempo</th>
+</tr>
+</thead>
+
+<tbody id="rankingBody">
+
+<tr><td>1</td><td>-</td><td>-</td></tr>
+<tr><td>2</td><td>-</td><td>-</td></tr>
+<tr><td>3</td><td>-</td><td>-</td></tr>
+<tr><td>4</td><td>-</td><td>-</td></tr>
+<tr><td>5</td><td>-</td><td>-</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="modalNombre" class="modal" style="display:none">
+<div class="modalContenido">
+
+<h3>🏆 Nuevo récord</h3>
+
+<input id="inputNombre" placeholder="Tu nombre">
+
+<br><br>
+
+<button id="aceptarNombre">Guardar</button>
+<button id="cancelarNombre">Cancelar</button>
+
+</div>
+</div>
+
+<script type="module" src="motorpuzzle.js"></script>
+<script src="jsgeneral.js"></script>
+
+</body>
+</html>
